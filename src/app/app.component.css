@@ -1,0 +1,36 @@
+.main-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: aqua;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    background-color: blueviolet;
+}
+.control-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firstCurrency{
+    min-width: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.secondCurrency{
+    min-width: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.conversion-result{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
