@@ -2,7 +2,7 @@
   <div class="header">
     <div class="control-container">
       <div class="firstCurrency">
-        <select
+        <select [value]="base"
           #countr1
           name=""
           id="country1"
@@ -12,11 +12,11 @@
           <option value="UAH">UAH</option>
           <option value="EUR">EUR</option>
         </select>
-        <input type="text" />
+        <input [(ngModel)]="firstAmount" [value]="firstAmount" type="text" />
       </div>
       to
       <div class="secondCurrency">
-        <select
+        <select [value]="converted"
           #countr2
           name=""
           (mouseleave)="changeToBeConverted(countr2.value)"
@@ -26,7 +26,7 @@
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
         </select>
-        <input type="text" />
+        <input [(ngModel)]="secondAmount" [value]="secondAmount" type="text" />
       </div>
       <button (click)="convert()" >Submit</button>
       <div class="conversion-result">
