@@ -39,7 +39,7 @@ export class AppComponent {
       .getcurrencydata(this.base, this.converted)
       .subscribe((data) => {
         this.currjson = data;
-        var multiple = String(+this.firstAmount * +this.currjson.result);
+        var multiple = String(+this.firstAmount * +this.currjson.result / +this.secondAmount);
         this.result = multiple;
       });
   }

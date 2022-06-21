@@ -1,39 +1,53 @@
 <div class="main-container">
-  <div class="header">
-    <div class="control-container">
-      <div class="firstCurrency">
-        <select [value]="base"
-          #countr1
-          name=""
-          id="country1"
-          (mouseleave)="changebase(countr1.value)"
-        >
-          <option value="USD">USD</option>
-          <option value="UAH">UAH</option>
-          <option value="EUR">EUR</option>
-        </select>
-        <input [(ngModel)]="firstAmount" [value]="firstAmount" type="text" />
-      </div>
-      to
-      <div class="secondCurrency">
-        <select [value]="converted"
-          #countr2
-          name=""
-          (mouseleave)="changeToBeConverted(countr2.value)"
-          id="country2"
-        >
-          <option value="UAH">UAH</option>
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-        </select>
-        <input [(ngModel)]="secondAmount" [value]="secondAmount" type="text" />
-      </div>
-      <button (click)="convert()" >Submit</button>
-      <div class="conversion-result">
-        <p>1 {{base}}</p>
-        =
-        <p>{{result}} {{converted}}</p>
+    <div class="header">
+      <div class="control-container">
+        <div class="firstCurrency">
+          <select
+            class="form-select"
+            [value]="base"
+            #countr1
+            name=""
+            id="country1"
+            (mouseleave)="changebase(countr1.value)"
+          >
+            <option value="USD">USD</option>
+            <option value="UAH">UAH</option>
+            <option value="EUR">EUR</option>
+          </select>
+          <input
+            class="form-control"
+            [(ngModel)]="firstAmount"
+            [value]="firstAmount"
+            type="text"
+          />
+        </div>
+        to
+        <div class="secondCurrency">
+          <select
+            class="form-select"
+            [value]="converted"
+            #countr2
+            name=""
+            (mouseleave)="changeToBeConverted(countr2.value)"
+            id="country2"
+          >
+            <option value="UAH">UAH</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select>
+          <input
+            class="form-control"
+            [(ngModel)]="secondAmount"
+            [value]="secondAmount"
+            type="text"
+          />
+        </div>
+        <button class="btn btn-primary" (click)="convert()">Submit</button>
+        <div class="conversion-result">
+          <p class="h3">{{ firstAmount }} {{ base }}</p>
+          <p class="h3">=</p>
+          <p class="h3">{{ result }} {{ converted }}</p>
+        </div>
       </div>
     </div>
-  </div>
 </div>

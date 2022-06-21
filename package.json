@@ -2,9 +2,8 @@
   "name": "currency-converter",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-    "start" : "node server.js",
+    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -19,8 +18,6 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
-    "express": "^4.18.1",
-    "path": "^0.12.7",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -37,9 +34,5 @@
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.7.2"
-  },
-  "engines": {
-    "node": "8.1.2",
-    "npm": "5.0.3"
   }
 }
